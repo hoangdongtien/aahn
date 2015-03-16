@@ -5,17 +5,31 @@
  */
 package gui;
 
+import java.awt.Dimension;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Tien Hoang D
+ * @author tien.hd
  */
 public class HomeFrame extends javax.swing.JFrame {
+    public boolean login=false;
 
+    public boolean getLogin() {
+        return login;
+    }
+
+    public void setLogin(boolean login) {
+        this.login = login;
+    }
     /**
      * Creates new form HomeFrame
      */
     public HomeFrame() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        pnlMain.setMinimumSize(new Dimension(this.getWidth(), this.getHeight()));
     }
 
     /**
@@ -27,17 +41,87 @@ public class HomeFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlMain = new javax.swing.JScrollPane();
+        mnuBar = new javax.swing.JMenuBar();
+        mnuPurchase = new javax.swing.JMenu();
+        mnuSales = new javax.swing.JMenu();
+        mnuSaleAdd = new javax.swing.JMenu();
+        mnuSalesList = new javax.swing.JMenu();
+        mnuVehicle = new javax.swing.JMenu();
+        mnuVehicleSearch = new javax.swing.JMenu();
+        mnuVehicleReport = new javax.swing.JMenu();
+        mnuCustomer = new javax.swing.JMenu();
+        mnuCustomerList = new javax.swing.JMenu();
+        mnuCustomerNew = new javax.swing.JMenu();
+        mnuCustomerReport = new javax.swing.JMenu();
+        mnuEmployee = new javax.swing.JMenu();
+        mnuEmployeeAdd = new javax.swing.JMenu();
+        mnuEmployeeList = new javax.swing.JMenu();
+        mnuEmployeeReport = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mnuPurchase.setText("Purchase Orders");
+        mnuPurchase.setActionCommand("Purchase");
+        mnuBar.add(mnuPurchase);
+
+        mnuSales.setText("Sales Orders");
+
+        mnuSaleAdd.setText("Search");
+        mnuSales.add(mnuSaleAdd);
+
+        mnuSalesList.setText("Report");
+        mnuSales.add(mnuSalesList);
+
+        mnuBar.add(mnuSales);
+
+        mnuVehicle.setText("Vehicles");
+
+        mnuVehicleSearch.setText("Search");
+        mnuVehicle.add(mnuVehicleSearch);
+
+        mnuVehicleReport.setText("Report");
+        mnuVehicle.add(mnuVehicleReport);
+
+        mnuBar.add(mnuVehicle);
+
+        mnuCustomer.setText("Customer");
+
+        mnuCustomerList.setText("List");
+        mnuCustomer.add(mnuCustomerList);
+
+        mnuCustomerNew.setText("Add New");
+        mnuCustomer.add(mnuCustomerNew);
+
+        mnuCustomerReport.setText("Report");
+        mnuCustomer.add(mnuCustomerReport);
+
+        mnuBar.add(mnuCustomer);
+
+        mnuEmployee.setText("Employee");
+
+        mnuEmployeeAdd.setText("Add");
+        mnuEmployee.add(mnuEmployeeAdd);
+
+        mnuEmployeeList.setText("List");
+        mnuEmployee.add(mnuEmployeeList);
+
+        mnuEmployeeReport.setText("Report");
+        mnuEmployee.add(mnuEmployeeReport);
+
+        mnuBar.add(mnuEmployee);
+
+        setJMenuBar(mnuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(pnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(pnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -46,38 +130,25 @@ public class HomeFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomeFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HomeFrame().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar mnuBar;
+    private javax.swing.JMenu mnuCustomer;
+    private javax.swing.JMenu mnuCustomerList;
+    private javax.swing.JMenu mnuCustomerNew;
+    private javax.swing.JMenu mnuCustomerReport;
+    private javax.swing.JMenu mnuEmployee;
+    private javax.swing.JMenu mnuEmployeeAdd;
+    private javax.swing.JMenu mnuEmployeeList;
+    private javax.swing.JMenu mnuEmployeeReport;
+    private javax.swing.JMenu mnuPurchase;
+    private javax.swing.JMenu mnuSaleAdd;
+    private javax.swing.JMenu mnuSales;
+    private javax.swing.JMenu mnuSalesList;
+    private javax.swing.JMenu mnuVehicle;
+    private javax.swing.JMenu mnuVehicleReport;
+    private javax.swing.JMenu mnuVehicleSearch;
+    private javax.swing.JScrollPane pnlMain;
     // End of variables declaration//GEN-END:variables
 }

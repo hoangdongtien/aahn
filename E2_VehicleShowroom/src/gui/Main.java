@@ -3,15 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package runner;
-
-import gui.LoginFrame;
-
-
+package gui;
 
 /**
  *
- * @author Tien Hoang D
+ * @author tien.hd
  */
 public class Main {
     public static void main(String args[]) {
@@ -39,12 +35,9 @@ public class Main {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(
-                new Runnable() {
-
-            @Override
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               new LoginFrame().setVisible(true);
+                new LoginFrame().setVisible(true);
             }
         });
     }
